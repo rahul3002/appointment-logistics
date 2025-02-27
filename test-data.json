@@ -1,0 +1,363 @@
+{
+  "auth": {
+    "register": {
+      "admin": {
+        "name": "Admin User",
+        "email": "admin@logistics.com",
+        "password": "Password123!",
+        "role": "admin"
+      },
+      "operations": {
+        "name": "Operations User",
+        "email": "operations@logistics.com",
+        "password": "Password123!",
+        "role": "operations"
+      },
+      "partner": {
+        "name": "Partner User",
+        "email": "partner@logistics.com",
+        "password": "Password123!",
+        "role": "partner"
+      },
+      "user": {
+        "name": "Regular User",
+        "email": "user@logistics.com",
+        "password": "Password123!",
+        "role": "user"
+      }
+    },
+    "login": {
+      "admin": {
+        "email": "admin@logistics.com",
+        "password": "Password123!"
+      },
+      "operations": {
+        "email": "operations@logistics.com",
+        "password": "Password123!"
+      },
+      "partner": {
+        "email": "partner@logistics.com",
+        "password": "Password123!"
+      },
+      "user": {
+        "email": "user@logistics.com",
+        "password": "Password123!"
+      }
+    }
+  },
+  "partners": {
+    "create": {
+      "expressDelivery": {
+        "name": "Express Delivery Services",
+        "email": "contact@expressdelivery.com",
+        "phone": "9876543210",
+        "address": {
+          "street": "123 Logistics Avenue",
+          "city": "Mumbai",
+          "state": "Maharashtra",
+          "zipCode": "400001",
+          "country": "India"
+        },
+        "serviceArea": [
+          {
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "zipCode": "400001"
+          },
+          {
+            "city": "Pune",
+            "state": "Maharashtra",
+            "zipCode": "411001"
+          }
+        ],
+        "vehicleType": "van",
+        "vehicleCapacity": {
+          "weight": 1000,
+          "volume": 8
+        },
+        "status": "active"
+      },
+      "speedyLogistics": {
+        "name": "Speedy Logistics",
+        "email": "info@speedylogistics.com",
+        "phone": "8765432109",
+        "address": {
+          "street": "456 Transport Road",
+          "city": "Delhi",
+          "state": "Delhi",
+          "zipCode": "110001",
+          "country": "India"
+        },
+        "serviceArea": [
+          {
+            "city": "Delhi",
+            "state": "Delhi",
+            "zipCode": "110001"
+          },
+          {
+            "city": "Gurgaon",
+            "state": "Haryana",
+            "zipCode": "122001"
+          }
+        ],
+        "vehicleType": "truck",
+        "vehicleCapacity": {
+          "weight": 5000,
+          "volume": 20
+        },
+        "status": "active"
+      }
+    },
+    "update": {
+      "expressDelivery": {
+        "vehicleCapacity": {
+          "weight": 1500,
+          "volume": 10
+        },
+        "serviceArea": [
+          {
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "zipCode": "400001"
+          },
+          {
+            "city": "Pune",
+            "state": "Maharashtra",
+            "zipCode": "411001"
+          },
+          {
+            "city": "Thane",
+            "state": "Maharashtra",
+            "zipCode": "400601"
+          }
+        ]
+      }
+    }
+  },
+  "hubs": {
+    "create": {
+      "mumbaiCentral": {
+        "name": "Mumbai Central Hub",
+        "code": "MCH001",
+        "type": "warehouse",
+        "location": {
+          "address": {
+            "street": "789 Warehouse Lane",
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "zipCode": "400001",
+            "country": "India"
+          },
+          "coordinates": {
+            "latitude": 19.0760,
+            "longitude": 72.8777
+          }
+        },
+        "capacity": {
+          "maxPackages": 5000,
+          "currentPackages": 0,
+          "maxVehicles": 50
+        },
+        "operatingHours": {
+          "monday": { "open": "08:00", "close": "20:00" },
+          "tuesday": { "open": "08:00", "close": "20:00" },
+          "wednesday": { "open": "08:00", "close": "20:00" },
+          "thursday": { "open": "08:00", "close": "20:00" },
+          "friday": { "open": "08:00", "close": "20:00" },
+          "saturday": { "open": "09:00", "close": "18:00" },
+          "sunday": { "open": "10:00", "close": "16:00" }
+        },
+        "contactInfo": {
+          "managerName": "Rahul Sharma",
+          "phone": "9876543210",
+          "email": "rahul.sharma@logistics.com"
+        },
+        "serviceArea": [
+          {
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "zipCode": "400001",
+            "radius": 25
+          }
+        ]
+      },
+      "delhiNorth": {
+        "name": "Delhi North Hub",
+        "code": "DNH001",
+        "type": "distribution",
+        "location": {
+          "address": {
+            "street": "456 Transport Complex",
+            "city": "Delhi",
+            "state": "Delhi",
+            "zipCode": "110001",
+            "country": "India"
+          },
+          "coordinates": {
+            "latitude": 28.7041,
+            "longitude": 77.1025
+          }
+        },
+        "capacity": {
+          "maxPackages": 3000,
+          "currentPackages": 0,
+          "maxVehicles": 30
+        },
+        "operatingHours": {
+          "monday": { "open": "08:00", "close": "20:00" },
+          "tuesday": { "open": "08:00", "close": "20:00" },
+          "wednesday": { "open": "08:00", "close": "20:00" },
+          "thursday": { "open": "08:00", "close": "20:00" },
+          "friday": { "open": "08:00", "close": "20:00" },
+          "saturday": { "open": "09:00", "close": "18:00" },
+          "sunday": { "open": "closed", "close": "closed" }
+        },
+        "contactInfo": {
+          "managerName": "Priya Singh",
+          "phone": "8765432109",
+          "email": "priya.singh@logistics.com"
+        },
+        "serviceArea": [
+          {
+            "city": "Delhi",
+            "state": "Delhi",
+            "zipCode": "110001",
+            "radius": 20
+          }
+        ]
+      }
+    },
+    "update": {
+      "mumbaiCentral": {
+        "capacity": {
+          "maxPackages": 6000,
+          "currentPackages": 1200,
+          "maxVehicles": 60
+        },
+        "operatingHours": {
+          "sunday": { "open": "09:00", "close": "18:00" }
+        }
+      }
+    }
+  },
+  "slots": {
+    "create": {
+      "mumbaiMorning": {
+        "date": "2025-03-01",
+        "startTime": "2025-03-01T09:00:00.000Z",
+        "endTime": "2025-03-01T10:00:00.000Z",
+        "type": "pickup",
+        "capacity": 10,
+        "price": 199.99,
+        "status": "available"
+      },
+      "mumbaiAfternoon": {
+        "date": "2025-03-01",
+        "startTime": "2025-03-01T14:00:00.000Z",
+        "endTime": "2025-03-01T15:00:00.000Z",
+        "type": "delivery",
+        "capacity": 8,
+        "price": 249.99,
+        "status": "available"
+      },
+      "delhiMorning": {
+        "date": "2025-03-02",
+        "startTime": "2025-03-02T09:00:00.000Z",
+        "endTime": "2025-03-02T10:00:00.000Z",
+        "type": "pickup",
+        "capacity": 12,
+        "price": 189.99,
+        "status": "available"
+      },
+      "delhiAfternoon": {
+        "date": "2025-03-02",
+        "startTime": "2025-03-02T14:00:00.000Z",
+        "endTime": "2025-03-02T15:00:00.000Z",
+        "type": "delivery",
+        "capacity": 10,
+        "price": 239.99,
+        "status": "available"
+      }
+    },
+    "update": {
+      "mumbaiMorning": {
+        "capacity": 8,
+        "price": 219.99
+      }
+    }
+  },
+  "appointments": {
+    "create": {
+      "mumbaiPickup": {
+        "type": "pickup",
+        "scheduledTime": "2025-03-01T09:30:00.000Z",
+        "location": {
+          "address": {
+            "street": "123 Customer Street",
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "zipCode": "400001",
+            "country": "India"
+          },
+          "coordinates": {
+            "latitude": 19.0825,
+            "longitude": 72.8900
+          }
+        },
+        "customer": {
+          "name": "Amit Patel",
+          "phone": "9876543210",
+          "email": "amit.patel@example.com"
+        },
+        "package": {
+          "size": "medium",
+          "weight": 5.2,
+          "description": "Electronics package",
+          "specialHandling": false
+        },
+        "priority": 2,
+        "notes": "Call before arrival"
+      },
+      "delhiDelivery": {
+        "type": "delivery",
+        "scheduledTime": "2025-03-02T14:30:00.000Z",
+        "location": {
+          "address": {
+            "street": "456 Delivery Road",
+            "city": "Delhi",
+            "state": "Delhi",
+            "zipCode": "110001",
+            "country": "India"
+          },
+          "coordinates": {
+            "latitude": 28.7100,
+            "longitude": 77.1200
+          }
+        },
+        "customer": {
+          "name": "Neha Gupta",
+          "phone": "8765432109",
+          "email": "neha.gupta@example.com"
+        },
+        "package": {
+          "size": "large",
+          "weight": 12.5,
+          "description": "Furniture package",
+          "specialHandling": true
+        },
+        "priority": 1,
+        "notes": "Fragile items, handle with care"
+      }
+    },
+    "update": {
+      "mumbaiPickup": {
+        "status": "confirmed",
+        "notes": "Call before arrival, customer will be available after 9:15 AM"
+      },
+      "delhiDelivery": {
+        "status": "in-transit",
+        "estimatedArrival": "2025-03-02T14:15:00.000Z"
+      }
+    }
+  }
+}

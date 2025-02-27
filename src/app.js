@@ -42,6 +42,23 @@ app.use('/api/v1/appointments', appointmentRoutes);
 app.use('/api/v1/hubs', hubRoutes);
 app.use('/api/v1/slots', slotRoutes);
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({
+    status: 'success',
+    message: 'Appointment Logistics API is running',
+    version: '1.0.0',
+    endpoints: {
+      healthcheck: '/api/v1/healthcheck',
+      auth: '/api/v1/auth',
+      partners: '/api/v1/partners',
+      appointments: '/api/v1/appointments',
+      hubs: '/api/v1/hubs',
+      slots: '/api/v1/slots'
+    }
+  });
+});
+
 // Handle 404 errors
 app.use(notFound);
 
