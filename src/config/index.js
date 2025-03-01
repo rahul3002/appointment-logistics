@@ -8,6 +8,10 @@ module.exports = {
   mongodb: {
     uri: process.env.MONGODB_URI || 'mongodb://localhost:27017/appointment_logistics',
     options: {
+       useNewUrlParser: true,
+      useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 30000, // Increase the timeout to 30 seconds
+      socketTimeoutMS: 45000, // Increase the socket timeout to 45 seconds
     }
   },
   
