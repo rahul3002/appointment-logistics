@@ -6,7 +6,7 @@ module.exports = {
   logLevel: process.env.LOG_LEVEL || 'info',
   
   mongodb: {
-    uri: process.env.MONGODB_URI || 'mongodb://localhost:27017/appointment_logistics',
+    uri: process.env.MONGODB_URI || 'mongodb+srv://rahulbagal7171:8UQgwSQ5g6pYT84A@cluster0.ot6nw.mongodb.net/appointment_logistics',
     options: {
        useNewUrlParser: true,
       useUnifiedTopology: true,
